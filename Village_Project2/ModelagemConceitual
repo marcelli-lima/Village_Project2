@@ -1,0 +1,26 @@
+Modelagem Conceitual
+
+	Vila
+		- id ** int
+		- nome ** varchar(60)
+		- Sobrenome ** varchar(60)
+		- CPF ** varchar(60)
+		- DataNascimento ** datetime
+		- Renda ** decimal (5,2)
+
+	Habitante 
+		- id ** int
+		- VilaId ** int
+		- email ** varchar(255)
+		- senha ** varchar(255)
+
+ 	habitantes_role 
+		- habitante_id
+		- role_id
+
+	Role
+		- id
+		- nome 
+
+		1,n / 1,n -> n,n
+		user -> Role
