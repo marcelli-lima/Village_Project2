@@ -26,8 +26,8 @@
 
 ## 🛠 Tecnologias
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="16" height="16" /> Java
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"  height="30" width="40"/> Java
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" width="16" height="16" /> Spring
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"  height="25" width="35" /> Spring
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="16" height="16" /> PostgreSQL
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="25" width="35" /> PostgreSQL
