@@ -46,8 +46,7 @@ public class VillageRest {
         return habitanteService.filteredMonthList(month);
     }
 
-    
-    @GetMapping("/age")
+    @GetMapping("/village/age{age}")
     public List<VillageDTO> listAge(@RequestParam("age") String age) throws SQLException, ParseException {
         return habitanteService.filteredAgeList(age);
     }

@@ -93,7 +93,7 @@ public class VillageRepository {
     public Boolean create(VillageDTO habitante) throws SQLException {
 
         try (Connection connection = new JDBCConfig().getConnection()) {
-            PreparedStatement pStmt = connection.prepareStatement("iINSERT INTO village VALUES (default, _, _, _, _, _,);");
+            PreparedStatement pStmt = connection.prepareStatement("iINSERT INTO village VALUES (default, ?, ?, ?, ?, ?,);");
             pStmt.setString(1, habitante.getName());
             pStmt.setString(2, habitante.getSurname());
             pStmt.setString(7, habitante.getCPF());
@@ -154,7 +154,7 @@ public class VillageRepository {
         List<FilterVillageDTO> habitantes = new ArrayList<>();
 
         try (Connection connection = new JDBCConfig().getConnection()) {
-            PreparedStatement pStmt = connection.prepareStatement("SELECT * FROM village where name LIKE _");
+            PreparedStatement pStmt = connection.prepareStatement("SELECT * FROM village where name LIKE ?");
             pStmt.setString(1, name + "%");
             pStmt.execute();
             ResultSet rs = pStmt.getResultSet();
@@ -172,7 +172,7 @@ public class VillageRepository {
 
     public Boolean deleteUser(String id) throws SQLException {
         try (Connection connection = new JDBCConfig().getConnection()) {
-            PreparedStatement pStmt = connection.prepareStatement("DELETE FROM village where id = _");
+            PreparedStatement pStmt = connection.prepareStatement("DELETE FROM village where id = ?");
             pStmt.setString(1, id);
             pStmt.execute();
             ResultSet rs = pStmt.getResultSet();
@@ -182,7 +182,7 @@ public class VillageRepository {
 
     public void updateUser(String email, String password) {
         try (Connection connection = new JDBCConfig().getConnection()) {
-            PreparedStatement pStmt = connection.prepareStatement("update village set password = _ where email = _");
+            PreparedStatement pStmt = connection.prepareStatement("update village set password = ? where email = ?");
             pStmt.setString(1, email);
             pStmt.setString(2, password);
             pStmt.execute();
@@ -196,7 +196,7 @@ public class VillageRepository {
         List<FilterVillageDTO> habitantes = new ArrayList<>();
 
         try (Connection connection = new JDBCConfig().getConnection()) {
-            PreparedStatement pStmt = connection.prepareStatement("SELECT * FROM village where birthDate LIKE _");
+            PreparedStatement pStmt = connection.prepareStatement("SELECT * FROM village where birthDate LIKE ?");
             pStmt.setString(1, "%-" + month + "-%");
             pStmt.execute();
             ResultSet rs = pStmt.getResultSet();
